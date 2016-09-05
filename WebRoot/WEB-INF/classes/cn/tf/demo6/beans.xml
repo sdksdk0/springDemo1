@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="replyDaoId" class="cn.tf.demo6.ReplyDao"  
+		init-method="replyInit"
+		destroy-method="replyDestory">
+		<property name="username"  value="张三"></property>
+	</bean>
+	
+	<!-- 配置后处理bean -->
+	<bean  class="cn.tf.demo6.MyBeanPostProcessor"></bean>
+	
+</beans>

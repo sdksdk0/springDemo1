@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+	<!-- 创建dao -->
+	<bean id="bookDaoId"  class="cn.tf.demo2.BookDaoImpl"></bean>
+	<!-- 创建service -->
+	<bean id="bookServiceId"  class="cn.tf.demo2.BookServiceImpl">
+		<!-- 使用property来完成注入,name表示当前属性名称，ref表示配置文件中另一个bean的引用 -->
+		<property name="bookDao" ref="bookDaoId"></property>
+	</bean>
+	
+</beans>
