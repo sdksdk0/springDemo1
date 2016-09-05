@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="collbeanId" class="cn.tf.demo7.d.CollBean">
+		<!-- 数组 -->
+		<property name="arrayData">
+			<array>
+				<value>数组1</value>
+				<value>数组2</value>
+				<value>数组3</value>
+			</array>
+		</property>
+		<!-- List集合 -->
+		<property name="listData">
+			<list>
+				<value>List集合1</value>
+				<value>List集合1</value>
+				<value>List集合1</value>
+			</list>
+		</property>
+		
+		<!-- Set集合 -->
+		<property name="setData">
+			<set>
+				<value>set集合1</value>
+				<value>set集合2</value>
+				<value>set集合3</value>
+			</set>
+		</property>
+		
+		<!-- map集合 -->
+		<property name="mapData">
+			<map>
+				<entry  key="aa"  value="00"></entry>
+				<entry>
+					<key><value>bb</value></key>
+					<value>11</value>
+				</entry>
+			</map>
+		</property>
+		
+		<!-- properties对象 -->
+		<property name="propsData">
+			<props>
+				<prop key="aa">00</prop>
+				<prop key="bb">11</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
