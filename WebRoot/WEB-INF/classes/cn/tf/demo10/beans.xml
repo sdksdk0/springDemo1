@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd
+       					   http://www.springframework.org/schema/context
+       					   http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- 使 注入的注解可以使用 -->
+	 <context:annotation-config></context:annotation-config>
+	
+	<!-- 所有的bean都在xml配置 
+		所有的依赖都是注解
+	-->
+	<bean id="userDaoId" class="cn.tf.demo10.UserDaoImpl"></bean>
+	<bean id="userServiceId" class="cn.tf.demo10.UserServiceImpl"></bean>
+	<bean id="userActionId" class="cn.tf.demo10.UserAction"></bean>
+</beans>
